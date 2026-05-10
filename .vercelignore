@@ -1,0 +1,21 @@
+# Vercel Hobby plan caps Serverless Functions at 12 per deployment.
+# These files are excluded from the test deploy to stay under the limit.
+# Remove entries (or upgrade to Pro) to deploy the full surface.
+
+# Express router — meant for server.js, not for Vercel's zero-config functions
+api/routes.js
+
+# Buyer application flow (separate from core marketplace)
+api/access/
+
+# Admin tools beyond the main dashboard
+api/admin/attestations.js
+api/admin/review.js
+
+# UI-facing endpoints not needed for a backend smoke test
+api/notifications/
+api/watchlist/
+
+# Express entry point — Vercel doesn't run it
+server.js
+cron/
